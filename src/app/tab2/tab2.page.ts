@@ -1,5 +1,5 @@
 import { Component, Input, ViewChild } from '@angular/core';
-import { IonModal } from '@ionic/angular';
+import { IonModal } from '@angular/core'
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { FavouritesService } from '../services/favourites.service';
