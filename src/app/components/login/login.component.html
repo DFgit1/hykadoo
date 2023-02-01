@@ -1,0 +1,98 @@
+
+<img class="cloud" src="../../../assets/images/cloud.png" alt="cloud">
+<img class="cloud2" src="../../../assets/images/cloud.png" alt="cloud">
+
+<div class="main">
+    <h1>HYKADOO</h1>
+    <h3>Hiking made easy.</h3>
+    <img src="../../../assets/images/forest.png" alt="forest">
+    <button class="signlog" (click)="show()">Log In!</button>
+    <button class="signlog" (click)="showSignup()">Sign Up!</button>
+</div>
+
+
+<div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+   
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="myModalLabel">Login</h2>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="loginForm">
+                    <div class="form-group">
+                        <label>username:</label><br>
+                        <input type="text" formControlName="userName" class="form-control">
+                        <!-- <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div> -->
+                    </div>
+
+                    <div class="form-group">
+                        <label>password:</label><br>
+                        <input type="password" formControlName="password" class="form-control">
+                        <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div> -->
+                    </div>
+                    <button type="submit" class="logbut" (click)="login()" [routerLink]="['tabs/tab1']">Submit</button>
+                    <button type="button" class="xbut" data-dismiss="modal" (click)="hide()">x</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div [style.display]="showModal2 ? 'block' : 'none'" class="modal" id="imagemodal2" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="myModalLabel">Sign Up!</h2>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="registerForm">
+                    <div class="form-group">
+                        <label>email:</label><br>
+                        <input type="email" formControlName="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>password:</label><br>
+                        <input type="password" formControlName="password" class="form-control">
+                        <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div> -->
+                    </div>
+                    <div class="form-group">
+                        <label>username:</label><br>
+                        <input type="text" formControlName="userName" class="form-control">
+                        <!-- <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div> -->
+                    </div>           
+                    <div class="form-group">    
+                        <label>user image:</label><br>
+                        <ion-button class="imagebut" (click)="filePicker.click()">select image...</ion-button>
+                        <input type="file" #filePicker formControlName="image" class="form-control file-input" (change)="selectFile($event)" accept="image/x-png,image/gif,image/jpeg">
+                        <p>{{uploadImage}}</p>
+                    </div>  
+                               
+            
+                
+                
+
+                    <button type="submit" class="logbut" (click)="register()" [routerLink]="['tabs/tab1']">Submit</button>
+                    <button type="button" class="xbut" data-dismiss="modal" (click)="hide()">x</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div [style.display]="showModal2 ? 'block' : 'none'">
+    <img src="../../../assets/images/traveler.png" class="trav-form2">
+</div>
+<div [style.display]="showModal ? 'block' : 'none'" >
+    <img src="../../../assets/images/traveler.png" class="trav-form">
+</div>
+<div [style.display]="showBg ? 'block' : 'none'" class="bg-modal"></div>

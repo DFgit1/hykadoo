@@ -1,0 +1,70 @@
+.trail-card {
+    font-family: "sniglet";
+    color: black;
+    background-color: #efede7dd;
+    width: 300px;
+    margin: 40px auto;
+}
+
+ion-card-content {
+    font-family: "sniglet";
+    color: #EFEDE7;
+    // text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
+   
+}
+
+ion-card-title {
+    font-family: "sniglet";
+    color: #0E91A1;
+    
+}
+
+ion-card-subtitle {
+    font-family: "sniglet";
+    color: #3C4048;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+ion-label {
+    font-family: "sniglet";
+    color: #2C3333;
+}
+
+.trail-info {
+    margin-top: 0;
+}
+
+img {
+    aspect-ratio: 1.78;
+    object-fit:cover;
+}
+
+ion-button {
+    font-family: "sniglet";
+    color: #EFEDE7;
+    font-weight: 700;
+}
+
+.hyk-org{
+    display: flex;
+    justify-content: space-between;
+}
+
+ion-img {
+    width: 20px;
+}
+
+
+.accord {
+    font-family: "sniglet";
+}
+
+.item-inner, .ion-padding{
+background-color: #0E91A1;
+}
+
+ion-button {
+    --background: #0E91A1;
+  --background-activated: #0f9fb3;
+}

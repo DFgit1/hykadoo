@@ -1,0 +1,31 @@
+.trav-div {
+    padding-bottom: 110px;
+}
+
+h2 {
+    font-family: "sniglet";
+    color:#EFEDE7;
+    font-size: 40px;
+    text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin: 6px;
+}
+
+h3 {
+    font-family: "sniglet";
+    color:#EFEDE7;
+    font-size: 30px;
+    text-align: center;
+    margin: 6px;
+}
+
+.welcome {
+    background-color: #0e90a1d1;
+    display: flex;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 8px;
+    border: #EFEDE7 solid 4px;
+    flex-direction: column;
+}
+

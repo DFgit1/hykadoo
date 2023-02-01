@@ -1,1 +1,35 @@
 
+ion-img {
+    width: 40px;
+}
+
+ion-tab-bar {
+    height: 70px;
+   
+    --ion-tab-bar-background: #146C78;
+    border: 2px solid #EFEDE7;
+}
+
+ion-label{
+    color:#EFEDE7;
+    font-size: 18px;
+    text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
+    width: 80px;
+}
+
+.traveller {
+    display: block;
+    width: 130px;
+    position: absolute;
+    bottom: 70px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+ion-tab-button[aria-selected=true] {
+background-color: #efede757;
+border-radius: 8px;
+
+}

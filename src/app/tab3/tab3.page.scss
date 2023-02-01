@@ -1,0 +1,88 @@
+.idea {
+    width: 150px;
+    display: block;
+    margin: 40px auto;
+    margin-bottom: 100px;
+}
+
+h2 {
+    font-family: "sniglet";
+    text-align: center;
+    font-size: 40px;
+    margin-top: 260px;
+    color: #EFEDE7;
+    text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
+}
+
+
+.tips {
+    width: 110px;
+    display: block;
+    margin: 20px auto;
+    padding-top: 20px;
+ 
+}
+
+p {
+    font-family: "sniglet";
+    text-align: center;
+    color: black;
+    width: 240px;
+    margin: 20px auto;
+}
+
+.boot {
+    width: 96px;
+    position: relative;
+    left: 10px;
+}
+
+.bell {
+    width: 96px;
+}
+
+.paint {
+    position: relative;
+    left: 20px;
+}
+
+.trav-div {
+    padding-bottom: 110px;
+}
+
+.cloud {
+    position: absolute;
+    width: 160px;
+    display: block;
+    left: 30px;
+    top: 80px
+}
+
+.cloud2 {
+    position: absolute;
+    width: 100px;
+    display: block;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    left: 240px;
+    top: 160px
+}
+
+h4 {
+    font-family: "sniglet";
+    text-align: center;
+    font-size: 30px;
+    color: #EFEDE7;
+    padding: 10px;
+}
+
+.infolinks {
+    background-color: #7DCE94;
+    display: flex;
+    margin: 60px auto;
+    width: 80%;
+    margin-bottom: 40px;
+    flex-direction: column;
+    border: 4px solid #EFEDE7;
+    border-radius: 10px;
+}

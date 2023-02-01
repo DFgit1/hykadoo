@@ -1,0 +1,44 @@
+ <div *ngFor="let hike of userHike.Hikes">
+  
+  <ion-card class="trail-card" *ngIf="userHike">
+  
+ 
+  
+  <img src="{{hike.image}}">
+
+  <ion-card-header>
+
+    <ion-card-title>{{hike.trail_name}}</ion-card-title>
+    <ion-card-subtitle>{{hike.park_name}}</ion-card-subtitle>
+    <div class="hyk-org">
+      <div class="trail-info">
+        <ion-label>Distance: {{hike.distance}}km</ion-label><br>
+        <ion-label> Duration: {{hike.duration}}hr</ion-label><br>
+        <ion-label>Difficulty: {{hike.difficulty}}</ion-label><br>
+      </div>
+      <ion-button color="secondary" (click)="presentToast('bottom')"> Remove</ion-button>
+
+    </div>
+
+  </ion-card-header>
+
+
+  <ion-card-content>
+
+    <!-- <ion-accordion-group>
+      <ion-accordion class="accord" value="first">
+        <ion-item class="accord" slot="header">
+          <ion-label class="accord">Reviews</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content" *ngFor="let review_item of hike.Reviews">
+          <div>
+            <app-review [reviews]="review_item"></app-review>
+          </div>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group> -->
+
+  </ion-card-content>
+
+</ion-card>
+</div>

@@ -1,0 +1,284 @@
+.cloud {
+    position: absolute;
+    width: 160px;
+    display: block;
+    left: 30px;
+    top: 80px;
+    animation: 60s  ease-in-out cloudanim1;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloudanim1 {
+    from {
+        left: 30px;
+    }
+
+    50% {
+        left: 200px;
+    }
+    to {
+        left: 30px;
+    }
+}
+
+.cloud2 {
+    position: absolute;
+    width: 100px;
+    display: block;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    left: 240px;
+    top: 160px;
+    animation: 60s  ease-in-out cloudanim2;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloudanim2 {
+    from {
+        left: 240px;
+    }
+
+    50% {
+        left: 40px;
+    }
+    to {
+        left: 240px;
+    }
+}
+
+
+
+.main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 60px;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #EFEDE7;
+    text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 0;
+}
+
+h3 {
+    text-align: center;
+    color: #EFEDE7;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+img {
+    width: 300px;
+}
+
+button {
+    font-family: "sniglet";
+    font-size: 30px;
+    color: #EFEDE7;
+    
+    margin: 10px;
+    width: 180px;
+    background-color: #146C78;
+    border: #EFEDE7 4px solid;
+    border-radius: 10px;
+}
+
+.signlog {
+    height: 70px;
+}
+
+button:active {
+    background-color: #7dce94;
+    color: #146C78;
+}
+
+
+.bg-modal {
+    background-color: #000;
+    opacity: .75;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+#imagemodal {
+    position: absolute;
+    background-color: #146C78;
+    border: #EFEDE7 4px solid;
+    padding: 10px;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 365px;
+    width: 80%;
+    border-radius: 6px;
+    animation: .5s ease-in-out login-push;
+}
+
+.trav-form {
+    width: 150px;
+    position: absolute;
+    top: 120px;
+right: 115px;
+
+    z-index: 3;
+    animation: .7s ease-in-out trav-push;
+}
+
+@keyframes trav-push {
+    from {
+        top: 600px;
+    }
+
+    to {
+        top: 120px;
+    }
+}
+
+.trav-form2 {
+    width: 150px;
+    position: absolute;
+    top: 32px;
+    right: 115px;
+    z-index: 3;
+    animation: .7s ease-in-out trav-push2;
+}
+
+@keyframes trav-push2 {
+    from {
+        top: 600px;
+    }
+
+    to {
+        top: 42px;
+    }
+}
+
+@keyframes login-push {
+    from {
+        top: 700px;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+#imagemodal2 {
+    position: absolute;
+    background-color: #146C78;
+    border: #EFEDE7 4px solid;
+    padding: 10px;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 536px;
+    width: 80%;
+    border-radius: 6px;
+    animation: .5s ease-in-out login-push;
+}
+
+input {
+    background-color: #7DCE94;
+    color: #000;
+    border: #EFEDE7 solid 4px;
+    border-radius: 4px;
+    width: 90%;
+}
+
+.logbut {
+    font-family: "sniglet";
+    font-size: 30px;
+    color: #EFEDE7;
+    padding: 10px;
+    margin: 26px auto;
+    width: 180px;
+    background-color: #7DCE94;
+    border: #EFEDE7 4px solid;
+    border-radius: 4px;
+    display: block;
+}
+
+.xbut {
+    font-family: "sniglet";
+    font-size: 34px;
+    color: #EFEDE7;
+    padding: 0 10px 4px 10px;
+    position: absolute;
+    top: -34px;
+    right: -34px;
+    width: 44px;
+    background-color: #7DCE94;
+    border: #EFEDE7 4px solid;
+    border-radius: 50px;
+}
+
+label {
+    text-align: center;
+    font-size: 26px;
+    display: inline-block;
+    margin: 2px auto 6px;
+    width: 100%;
+}
+
+input {
+    font-size: 22px;
+    color: #EFEDE7;
+    margin: 0 auto;
+    display: flex;
+}
+
+.modal-title {
+    font-size: 34px;
+    text-align: center;
+}
+
+input[type="file"]{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+
+}
+
+.imagebut {
+    font-family: "sniglet";
+    --background: #7DCE94;
+    color: #EFEDE7;
+    margin: 10px;
+    width: 180px;
+    border: #EFEDE7 4px solid;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    font-size: 24px;
+    text-transform: lowercase;
+    height: 40px;
+    --border-radius: 0;    
+}
+
+.imagebut:active {
+    background-color: #7dce94;
+    color: #146C78;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-style: italic;
+  }

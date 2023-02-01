@@ -1,0 +1,41 @@
+.flex-rating {
+    display: flex;
+    padding-top: 6px;
+}
+
+.rating-list {
+    display: flex;
+    list-style: none;
+    padding: 4px 10px 0 10px,
+}
+
+.rating-input{
+    font-family: "sniglet";
+    font-size: 2px;
+    margin: 0;
+    display: none;
+}
+
+.rating-list li {
+    font-size: 20px;
+    float: right;
+    color: #ddd;
+    padding: 5px 5px;
+}
+
+.rating-list li:hover {
+    color: #ffd700;
+}
+
+.rating-list li:hover~li {
+    color: #ffd700;
+}
+
+.rating-list li.selected {
+    color: #ffd700;
+}
+
+ngb-rating {
+    color: #88ff00;
+    font-size: 80px;
+}

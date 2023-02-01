@@ -1,0 +1,42 @@
+.review-div {
+    font-family: "sniglet";
+    color: #2C3333;
+    background-color: #EFEDE7;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.flex-rating {
+    display: flex;
+}
+
+.rating-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rating-input{
+    font-family: "sniglet";
+    font-size: 2px;
+    margin: 0;
+    display: none;
+}
+
+.rating-list li {
+    font-size: 16px;
+    float: right;
+    color: #ddd;
+    padding: 2px;
+}
+
+.rating-list li.selected {
+    color: #ffd700;
+}
+
+h5 {
+    display: flex;
+    margin-top: 5px;
+    margin-right: 2px;
+}

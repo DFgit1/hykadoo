@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+ 
+        <form [formGroup]="reviewForm">
+
+          <ion-item>
+            <ion-label position="stacked">User:</ion-label>
+            <ion-input formControlName="user_id" value="{{currentUser.id}}">{{currentUser.userName}}</ion-input>
+          </ion-item>
+
+          <!-- <ion-item color="danger" *ngIf="User_idFormControl.touched && User_idFormControl.errors?.['required']">Title Field is required</ion-item> -->
+
+
+          <ion-item>
+            <ion-label position="stacked">Rating:</ion-label>
+            <div class="flex-rating">
+            <ul class="list-inline rating-list"  *ngFor="let star of stars; let i= index">
+              <li  (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}" (mouseover)="addClass(star)"
+                   (mouseout)="removeClass()"> <span class="material-icons"> <ion-icon name="star"></ion-icon> </span>
+              </li>
+          </ul>
+          </div>
+          <ion-input class="rating-input" formControlName="rating" value="{{selectedValue}}"></ion-input>
+            
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Message</ion-label>
+            <ion-textarea formControlName="message"></ion-textarea>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Trail Name</ion-label>
+            <ion-select formControlName="trail_id">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-button variant="primary" (click)="onSubmitReview()" [disabled]="reviewForm.invalid">Submit</ion-button>
+
+        </form>
+     
+      
+
+</ion-content>

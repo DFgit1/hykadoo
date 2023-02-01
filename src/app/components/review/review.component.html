@@ -1,0 +1,12 @@
+
+<h3>Trail: {{reviews.trail_id}}</h3> 
+<h4>User: {{reviews.user_id}}</h4>
+<div class="flex-rating">
+    <h5>Rating: </h5>
+    <ul class="list-inline rating-list"  *ngFor="let star of stars; let i= index">
+      <li  [ngClass]="{'selected': ( star <= reviews.rating )}"> <span class="material-icons"> <ion-icon name="star"></ion-icon> </span>
+      </li>
+  </ul>
+  </div>
+ 
+<p>Comment: {{reviews.message}}</p>
