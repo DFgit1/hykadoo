@@ -10,10 +10,12 @@ import { ReviewsService } from '../services/reviews.service';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  styleUrls: ['tab1.page.scss'],
+ 
 })
 export class Tab1Page {
   @ViewChild(IonModal) modal!: IonModal;
+  
   hikes!: Ihike[];
   currentUser: any;
   Reviews!:any;

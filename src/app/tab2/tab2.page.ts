@@ -1,10 +1,11 @@
 import { Component, Input, ViewChild } from '@angular/core';
-import { IonModal } from '@angular/core'
+
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { FavouritesService } from '../services/favourites.service';
 import { HikesService } from '../services/hikes.service';
 import { Ihike } from '../interfaces/ihike';
+import { IonModal } from '@ionic/angular';
 
 
 
@@ -12,6 +13,7 @@ import { Ihike } from '../interfaces/ihike';
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
+  
 })
 export class Tab2Page {
   hike! : Ihike[];
