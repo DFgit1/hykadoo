@@ -1,10 +1,18 @@
+ion-content {
+    background-color: #7DCE94;
+    color: #EFEDE7;
+    font-family: "sniglet";
+    --keyboard-offset: 0px !important;
+}
+
+
 .cloud {
     position: absolute;
     width: 160px;
     display: block;
     left: 30px;
     top: 80px;
-    animation: 60s  ease-in-out cloudanim1;
+    animation: 60s ease-in-out cloudanim1;
     animation-iteration-count: infinite;
 }
 
@@ -16,6 +24,7 @@
     50% {
         left: 200px;
     }
+
     to {
         left: 30px;
     }
@@ -29,7 +38,7 @@
     transform: scaleX(-1);
     left: 240px;
     top: 160px;
-    animation: 60s  ease-in-out cloudanim2;
+    animation: 60s ease-in-out cloudanim2;
     animation-iteration-count: infinite;
 }
 
@@ -41,6 +50,7 @@
     50% {
         left: 40px;
     }
+
     to {
         left: 240px;
     }
@@ -54,7 +64,7 @@
     height: 100%;
     justify-content: center;
     flex-direction: column;
-    margin-top: 60px;
+    padding-top: 60px;
     z-index: 1;
 }
 
@@ -82,7 +92,7 @@ button {
     font-family: "sniglet";
     font-size: 30px;
     color: #EFEDE7;
-    
+
     margin: 10px;
     width: 180px;
     background-color: #146C78;
@@ -106,7 +116,8 @@ button:active {
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
+    top: 0;
 }
 
 #imagemodal {
@@ -121,47 +132,68 @@ button:active {
     right: 0;
     margin: auto;
     height: 365px;
-    width: 80%;
+    width: 300px;
     border-radius: 6px;
     animation: .5s ease-in-out login-push;
 }
 
+.travdiv1 {
+    display: block;
+    width: 300px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 365px;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+
+
+
 .trav-form {
     width: 150px;
     position: absolute;
-    top: 120px;
-right: 115px;
-
+    top: -130px;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 3;
     animation: .7s ease-in-out trav-push;
 }
 
 @keyframes trav-push {
     from {
-        top: 600px;
+        top: 550px;
     }
 
     to {
-        top: 120px;
+        top: -130px;
     }
 }
 
 .trav-form2 {
     width: 150px;
     position: absolute;
-    top: 32px;
-    right: 115px;
+    top: -130px;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 3;
     animation: .7s ease-in-out trav-push2;
 }
 
 @keyframes trav-push2 {
     from {
-        top: 600px;
+        top: 550px;
     }
 
     to {
-        top: 42px;
+        top: -130px;
     }
 }
 
@@ -187,9 +219,22 @@ right: 115px;
     right: 0;
     margin: auto;
     height: 536px;
-    width: 80%;
+    width: 300px;
     border-radius: 6px;
     animation: .5s ease-in-out login-push;
+}
+
+.travdiv2 {
+    display: block;
+    width: 300px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 536px;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
 input {
@@ -247,7 +292,7 @@ input {
     text-align: center;
 }
 
-input[type="file"]{
+input[type="file"] {
     visibility: hidden;
     width: 0;
     height: 0;
@@ -257,6 +302,8 @@ input[type="file"]{
 .imagebut {
     font-family: "sniglet";
     --background: #7DCE94;
+    --background-activated: #146C78;
+    --color-activated: #7DCE94;
     color: #EFEDE7;
     margin: 10px;
     width: 180px;
@@ -268,17 +315,46 @@ input[type="file"]{
     font-size: 24px;
     text-transform: lowercase;
     height: 40px;
-    --border-radius: 0;    
+    --border-radius: 0;
 }
 
-.imagebut:active {
-    background-color: #7dce94;
-    color: #146C78;
-}
+// .imagebut:active {
+//     background-color: #7dce94;
+//     color: #146C78;
+// }
 
 p {
     margin: 0;
     padding: 0;
     text-align: center;
     font-style: italic;
-  }
+}
+
+.cloud-group {
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: -1;
+    bottom: 140px;
+}
+
+.ng-dirty {
+    --background: brown;
+}
+.image-name{
+    display: flex;
+    justify-content: center;
+}
+.imageCancel{
+    font-family: "sniglet";
+    font-size: 14px;
+    color: #EFEDE7;
+    --background-activated: #0E91A1;
+ 
+    padding: 0;
+    height: 20px;
+    margin: 0 0 0 10px;
+    width: 20px;
+    position: relative;
+    top: -3px;
+}

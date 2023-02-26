@@ -10,12 +10,14 @@ ion-card-content {
     font-family: "sniglet";
     color: #EFEDE7;
     // text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
+    
    
 }
 
 ion-card-title {
     font-family: "sniglet";
     color: #0E91A1;
+    font-size: 26px;
     
 }
 
@@ -40,11 +42,7 @@ img {
     object-fit:cover;
 }
 
-ion-button {
-    font-family: "sniglet";
-    color: #EFEDE7;
-    font-weight: 700;
-}
+
 
 .hyk-org{
     display: flex;
@@ -61,10 +59,61 @@ ion-img {
 }
 
 .item-inner, .ion-padding{
-background-color: #0E91A1;
+background-color: #0e90a1;
+opacity: 80%;
+padding: 6px;
 }
 
-ion-button {
+ion-button, .button-native{
+    font-family: "sniglet";
+    color: #EFEDE7;
+    font-weight: 700;
     --background: #0E91A1;
-  --background-activated: #0f9fb3;
+    --background-activated: #7DCE94;
 }
+
+.hyk-button{
+    --background-activated: #7DCE94;
+}
+
+.flex-rating {
+    display: flex;
+}
+
+.rating-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rating-input{
+    font-family: "sniglet";
+    font-size: 2px;
+    margin: 0;
+    display: none;
+}
+
+.rating-list li {
+    font-size: 16px;
+    float: right;
+    color: #ddd;
+    padding: 0 2px;
+}
+
+.rating-list li.selected {
+    color: #ffd700;
+}
+
+.hike-i {
+    color: #0E91A1
+}
+
+h5 {
+    font-family: "sniglet";
+    color:#3f4343;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 84px;
+}
+

@@ -28,8 +28,11 @@ ion-label{
   margin-right: auto; 
 }
 
-ion-tab-button[aria-selected=true] {
+// ion-tab-button[aria-selected=true] {
+// background-color: #efede757;
+// border-radius: 8px;
+// }
+.tab-selected {
 background-color: #efede757;
 border-radius: 8px;
-
 }

@@ -1,37 +1,51 @@
 <ion-card class="trail-card">
-  <img src="{{hike.image}}">
+  <div *ngIf="hike">
+    <img src="{{hike.image}}">
 
-  <ion-card-header>
+    <ion-card-header>
 
-    <ion-card-title>{{hike.trail_name}}</ion-card-title>
-    <ion-card-subtitle>{{hike.park_name}}</ion-card-subtitle>
-    <div class="hyk-org">
-      <div class="trail-info">
-        <ion-label>Distance: {{hike.distance}} km</ion-label><br>
-        <ion-label> Duration: {{hike.duration}} hr</ion-label><br>
-        <ion-label>Difficulty: {{hike.difficulty}}</ion-label><br>
-      </div>
-      <ion-button color="secondary" (click)="presentToast('bottom'); addUserHike(hike)"><ion-img
-          src="../../assets/images/heart.png"></ion-img> HYKE!</ion-button>
+      <ion-card-title>{{hike.trail_name}}</ion-card-title>
+      <ion-card-subtitle>{{hike.park_name}}</ion-card-subtitle>
+      <div class="hyk-org">
+        <div class="trail-info">
 
-    </div>
-  </ion-card-header>
-
-
-  <ion-card-content>
-
-    <ion-accordion-group>
-      <ion-accordion class="accord" value="first">
-        <ion-item class="accord" slot="header">
-          <ion-label class="accord">Reviews</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content" *ngFor="let review_item of hike.Reviews">
-          <div>
-            <app-review [reviews]="review_item"></app-review>
+          <div class="flex-rating">
+            <ul class="list-inline rating-list" *ngFor="let star of stars; let i= index">
+              <li [ngClass]="{'selected': ( star <= selectedValue )}"> <span class="material-icons"> <ion-icon
+                    name="star"></ion-icon> </span>
+              </li>
+            </ul>
+            <ion-label class="hike-i"> ({{ selectedValue || '0' }}/5)</ion-label>
           </div>
-        </div>
-      </ion-accordion>
-    </ion-accordion-group>
 
-  </ion-card-content>
+          <ion-label>Distance: <span class="hike-i">{{hike.distance}} km</span> </ion-label><br>
+          <ion-label> Duration: <span class="hike-i">{{hike.duration}} hr</span></ion-label><br>
+          <ion-label>Difficulty: <span class="hike-i">{{hike.difficulty}}</span></ion-label><br>
+        </div>
+
+        <ion-button color="secondary" class="hyk-button" [disabled]="favHikeIds && favHikeIds.includes(hike.id)"
+          (click)="presentToast('bottom'); addUserHike(hike)"><ion-img src="../../assets/images/heart.png"></ion-img>
+          HYKE!</ion-button>
+      </div>
+      <h5>{{hike.description}}</h5>
+    </ion-card-header>
+
+
+    <ion-card-content>
+
+      <ion-accordion-group>
+        <ion-accordion class="accord" value="first">
+          <ion-item class="accord" slot="header">
+            <ion-label class="accord">Reviews ({{ hike.Reviews?.length || '0' }})</ion-label>
+          </ion-item>
+
+          <div class="ion-padding" slot="content" *ngFor="let review_item of hike.Reviews">
+            <app-review [reviews]="review_item"></app-review>
+
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+
+    </ion-card-content>
+  </div>
 </ion-card>

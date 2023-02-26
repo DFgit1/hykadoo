@@ -16,6 +16,7 @@ ion-card-content {
 ion-card-title {
     font-family: "sniglet";
     color: #0E91A1;
+    font-size: 26px;
     
 }
 
@@ -40,10 +41,12 @@ img {
     object-fit:cover;
 }
 
-ion-button {
+ion-button, .button-native{
     font-family: "sniglet";
     color: #EFEDE7;
     font-weight: 700;
+    --background: #0E91A1;
+  --background-activated: #7DCE94;
 }
 
 .hyk-org{
@@ -64,7 +67,14 @@ ion-img {
 background-color: #0E91A1;
 }
 
-ion-button {
-    --background: #0E91A1;
-  --background-activated: #0f9fb3;
+h5 {
+    font-family: "sniglet";
+    color:#3f4343;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 84px;
+}
+
+.hike-i {
+    color: #0E91A1
 }

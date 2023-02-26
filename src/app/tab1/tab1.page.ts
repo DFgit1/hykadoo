@@ -5,6 +5,8 @@ import { UserService } from '../services/user.service';
 import { Router } from '@angular/router';
 import { IonModal } from '@ionic/angular';
 import { ReviewsService } from '../services/reviews.service';
+import { FavouritesService } from '../services/favourites.service';
+
 
 
 @Component({
@@ -19,24 +21,38 @@ export class Tab1Page {
   hikes!: Ihike[];
   currentUser: any;
   Reviews!:any;
+  favHikeIds: any;
+
+
 
  
  
   
  
 
-  constructor(private service:HikesService, public currentUserService: UserService, private router:Router, private reviewService:ReviewsService) {
-    service.getHikes().subscribe((results)=>{
+  constructor(private service:HikesService, public currentUserService: UserService, private router:Router, private reviewService:ReviewsService, private favService:FavouritesService) {
+   
+
+  }
+
+  ionViewWillEnter(){
+    this.service.getHikes().subscribe((results)=>{
       this.hikes = results;
     });
-    reviewService.getReviews().subscribe((results)=>{
+    this.reviewService.getReviews().subscribe((results)=>{
       this.Reviews = results;
     });
+
+    
+
   }
   
   ngOnInit(){
     this.currentUser = this.currentUserService.get_current_user();
+    
+
    }  
+
 
 
   
@@ -48,6 +64,8 @@ export class Tab1Page {
   modalDismiss(){
     this.modal.dismiss()
   }
+
+
 
  
 }

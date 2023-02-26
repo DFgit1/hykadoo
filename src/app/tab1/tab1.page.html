@@ -3,11 +3,12 @@
     <ion-title>
       Hykes
     </ion-title>
-    <div class="user-icon">
-      <ion-button id="open-modal" expand="block" class="user-button"><img class="user-img"
-          src="../../assets/images/traveler.png"></ion-button>
-    </div>
+    <div class="user-icon" *ngIf="currentUser">
+      <ion-button id="open-modal" expand="block" class="user-button">
 
+        <img class="user-img" src="http://localhost:3000/{{currentUser.image}}">
+      </ion-button>
+    </div>
 
   </ion-toolbar>
 </ion-header>
@@ -15,28 +16,48 @@
 <ion-content [fullscreen]="true">
 
 
+
+
+
   <div class="welcome">
     <h3>welcome,</h3>
     <h2>{{currentUser.userName}}!</h2>
     <h3>let's go hyking!</h3>
   </div>
-  <div class="trav-div">
-    <div *ngFor="let hike_item of hikes">
-      <app-hike [hike]="hike_item"></app-hike>
-    </div>
 
+
+
+  <div class="trav-div">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-sm="12" size-md="6" *ngFor="let hike_item of hikes">
+          <app-hike [hike]="hike_item"></app-hike>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
 
   </div>
+
+
   <ion-img class="tree1" src="../../assets/images/tree1.png"></ion-img>
   <ion-img class="tree2" src="../../assets/images/tree1.png"></ion-img>
   <ion-img class="tree3" src="../../assets/images/tree1.png"></ion-img>
 
 
-  <ion-modal trigger="open-modal" [initialBreakpoint]="0.16" [breakpoints]="[0, 0.16]" handleBehavior="cycle">
+  <ion-modal trigger="open-modal" [initialBreakpoint]="0.30" [breakpoints]="[0, 0.30]" handleBehavior="cycle">
     <ng-template>
       <ion-content color="secondary" class="ion-padding">
         <div class="ion-margin-top">
+          <div class="account-info">
+            <img class="account-img" src="http://localhost:3000/{{currentUser.image}}">
+            <div class="account-data">
+              <h4>{{currentUser.userName}}</h4>
+              <h4>{{currentUser.email}}</h4>
+              <h4>Member since: {{currentUser.dt}}</h4>
+            </div>
+          </div>
           <ion-button class="logstyle" expand="block" (click)="logout(); modal.dismiss()">Log Out</ion-button>
         </div>
       </ion-content>

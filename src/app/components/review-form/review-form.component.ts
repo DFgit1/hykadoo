@@ -46,7 +46,6 @@ ngOnInit(): void{
    addClass(star: number) {
     if (this.isMouseover) {
       this.selectedValue = star;
-      console.log(this.selectedValue);
       
     }
    }
@@ -54,7 +53,7 @@ ngOnInit(): void{
    removeClass() {
      if (this.isMouseover) {
         this.selectedValue = 0;
-        console.log(this.selectedValue);
+        
      }
    }
 
@@ -67,6 +66,7 @@ onSubmitReview() {
   this.service.addReview(this.reviewForm.value).subscribe((result) => {
     console.log(result);
     this.reviewForm.reset();
+    this.selectedValue = 0;
     this.presentAlert("Success", "Your rating was added successfully.");
   });
 }

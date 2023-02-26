@@ -19,13 +19,32 @@ h3 {
     margin: 6px;
 }
 
+
 .welcome {
     background-color: #0e90a1d1;
     display: flex;
     margin: 10px auto;
-    width: 80%;
+    width: 300px;
     border-radius: 8px;
     border: #EFEDE7 solid 4px;
     flex-direction: column;
 }
 
+
+//account css
+.account-img {
+    width: 100px;
+    object-fit: cover;
+    border: 4px #EFEDE7 solid;
+    border-radius: 100px;
+    aspect-ratio: 1;
+}
+
+.account-info {
+    display: flex;
+}
+
+.account-data {
+    font-family: "sniglet";
+    margin-left: 20px;
+}

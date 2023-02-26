@@ -6,6 +6,8 @@ export interface Ihike {
     distance: number;
     duration: number;
     difficulty: string;
+    description: string;
     Reviews: any;
+    Favourite: any;
    
 }

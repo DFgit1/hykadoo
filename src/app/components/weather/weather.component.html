@@ -4,23 +4,28 @@
 
     <ion-card-title>{{weather.name}}</ion-card-title>
     <ion-card-subtitle>Current Weather</ion-card-subtitle>
-    <ion-img class="weather-img" src="../../../assets/images/cloudy.png"></ion-img>
+    <div class="icon-div" *ngFor='let wmain of weather.weather'>
+      <ion-img class="weather-img" src="http://openweathermap.org/img/wn/{{wmain.icon}}@2x.png"></ion-img>
+    </div>
+    <!-- <ion-img class="weather-img" src="../../../assets/images/cloudy.png"></ion-img> -->
+
   </ion-card-header>
   <ion-card-content>
     <div class="hyk-org">
       <div class="weather">
         <div *ngFor='let wmain of weather.weather'>
-        <ion-label>Forecast: {{wmain.main}}</ion-label><br>
-        <ion-label>Currently: {{wmain.description}}</ion-label><br>
-</div>
-        <ion-label>Temp: {{weather.main.temp}}°C</ion-label><br>
-        <ion-label>Feels Like: {{weather.main.feels_like}}°C</ion-label><br>
-        <ion-label>Temp Min: {{weather.main.temp_min}}°C</ion-label><br>
-        <ion-label>Temp Max: {{weather.main.temp_max}}°C</ion-label><br>
-        <ion-label>Pressure: {{weather.main.pressure}}hPa</ion-label><br>
-        <ion-label>Humidity: {{weather.main.humidity}}%</ion-label><br>
-        
+          <ion-label>Forecast: <span>{{wmain.main}}</span></ion-label><br>
+          <ion-label>Currently: <span>{{wmain.description}}</span></ion-label><br>
+        </div>
+
+        <ion-label>Temp: <span>{{weather.main.temp}}°C</span></ion-label><br>
+        <ion-label>Feels Like: <span>{{weather.main.feels_like}}°C</span></ion-label><br>
+        <ion-label>Temp Min: <span>{{weather.main.temp_min}}°C</span></ion-label><br>
+        <ion-label>Temp Max: <span>{{weather.main.temp_max}}°C</span></ion-label><br>
+        <ion-label>Pressure: <span> {{weather.main.pressure}}hPa</span></ion-label><br>
+        <ion-label>Humidity: <span>{{weather.main.humidity}}%</span></ion-label><br>
+
       </div>
     </div>
-      </ion-card-content>
+  </ion-card-content>
 </ion-card>

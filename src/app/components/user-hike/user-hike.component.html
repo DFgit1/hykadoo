@@ -1,31 +1,37 @@
- <div *ngFor="let hike of userHike.Hikes">
-  
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-sm="12" size-md="6" 
+      *ngFor="let hike of userHike.Hikes; let itemIndex = index;">
   <ion-card class="trail-card" *ngIf="userHike">
-  
- 
-  
-  <img src="{{hike.image}}">
 
-  <ion-card-header>
+    
 
-    <ion-card-title>{{hike.trail_name}}</ion-card-title>
-    <ion-card-subtitle>{{hike.park_name}}</ion-card-subtitle>
-    <div class="hyk-org">
-      <div class="trail-info">
-        <ion-label>Distance: {{hike.distance}}km</ion-label><br>
-        <ion-label> Duration: {{hike.duration}}hr</ion-label><br>
-        <ion-label>Difficulty: {{hike.difficulty}}</ion-label><br>
+
+    <img src="{{hike.image}}">
+
+    <ion-card-header>
+
+      <ion-card-title>{{hike.trail_name}}</ion-card-title>
+      <ion-card-subtitle>{{hike.park_name}}</ion-card-subtitle>
+      <div class="hyk-org">
+        <div class="trail-info">
+          <ion-label>Distance: <span class="hike-i">{{hike.distance}}km</span></ion-label><br>
+          <ion-label> Duration: <span class="hike-i">{{hike.duration}}hr</span></ion-label><br>
+          <ion-label>Difficulty: <span class="hike-i">{{hike.difficulty}}</span></ion-label><br>
+        </div>
+       
+          <!-- <h1>{{hike.Favourite.id}}</h1> -->
+          <ion-button color="secondary" type="button" (click)="presentToast('bottom'); deleteUserHike(hike.Favourite.id, itemIndex)"> Remove</ion-button>
+        
       </div>
-      <ion-button color="secondary" (click)="presentToast('bottom')"> Remove</ion-button>
-
-    </div>
-
-  </ion-card-header>
+      <h5>{{hike.description}}</h5>
+    </ion-card-header>
 
 
-  <ion-card-content>
+    <ion-card-content>
 
-    <!-- <ion-accordion-group>
+      <!-- <ion-accordion-group>
       <ion-accordion class="accord" value="first">
         <ion-item class="accord" slot="header">
           <ion-label class="accord">Reviews</ion-label>
@@ -38,7 +44,9 @@
       </ion-accordion>
     </ion-accordion-group> -->
 
-  </ion-card-content>
+    </ion-card-content>
 
-</ion-card>
-</div>
+  </ion-card>
+  </ion-col>
+</ion-row>
+</ion-grid>

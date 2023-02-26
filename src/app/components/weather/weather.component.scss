@@ -10,13 +10,13 @@ ion-card-content {
     font-family: "sniglet";
     color: #EFEDE7;
     // text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
-   
+
 }
 
 ion-card-title {
     font-family: "sniglet";
     color: #0E91A1;
-    
+
 }
 
 ion-card-subtitle {
@@ -39,11 +39,17 @@ ion-label {
     padding: 4px;
 }
 
-.weather-img{
-    display: flex;
-    position: absolute;
-    width:70px;
-    left: 190px;
-    top: 5px;
+.weather-img {
+    display: block;
+    width: 90px;
 }
 
+span {
+    color: #0E91A1
+}
+
+.icon-div {
+    position: absolute;
+    left: 140px;
+    top: 0;
+}

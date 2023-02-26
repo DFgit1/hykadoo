@@ -53,8 +53,12 @@ export class LoginComponent implements OnInit {
   }
     selectFile(event: any): void {
       this.selectedImage = event.target.files[0];
-      this.uploadImage = this.selectedImage.name;
-      console.log(this.selectedImage)
+      let uploadImage = this.selectedImage.name;
+        if(uploadImage.length >16){
+          this.uploadImage = uploadImage.slice(0,16)+"..."+uploadImage.slice(-4);
+        }else{
+          this.uploadImage = uploadImage
+        }  
     }
 
     login(){
@@ -84,6 +88,11 @@ export class LoginComponent implements OnInit {
         alert('Sign up failed!');
         console.log(err);
       });
+    }
+
+    clearImage(){
+      this.selectedImage= '';
+      this.uploadImage = 'no image selected...'
     }
 }
 

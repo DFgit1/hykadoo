@@ -13,4 +13,9 @@ export class HikesService {
     return this.http.get<Ihike[]>("http://localhost:3000/hikes");
   }
 
+  getRatings(hike:any) {
+    return this.http.get<number[]>('http://localhost:3000/ratings/' + hike);
+  }
+
+
 }

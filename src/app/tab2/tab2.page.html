@@ -3,8 +3,9 @@
     <ion-title>My Hykes
     </ion-title>
     <div class="user-icon">
-      <ion-button id="open-modal2" expand="block" class="user-button"><img class="user-img"
-          src="../../assets/images/traveler.png"></ion-button>
+      <ion-button id="open-modal2" expand="block" class="user-button">
+        <img class="user-img" src="http://localhost:3000/{{currentUser.image}}">
+      </ion-button>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -16,39 +17,49 @@
   <div class="trav-div">
 
     <h1>let's plan your next hyke!</h1>
+
     <app-weather></app-weather>
 
-  
- 
-    <div *ngFor="let fav_item of userHikes">
-      <h1>{{fav_item.userName}}</h1>
-      <app-user-hike [userHike]="fav_item"></app-user-hike>
+
+
+    <div class="no-hykes" *ngIf="favHikeIds?.length === 0">
+      <h3>no hykes added!</h3>
+      <ion-img class="nohykes-img" src="../../assets/images/forest.png"></ion-img>
+      <h4>head on over to the hykes tab and favourite some hykes!</h4>
     </div>
 
+
+
+
+
+
+    <div size="12" size-sm="12" size-md="6" *ngFor="let fav_item of userHikes">
+      <app-user-hike [userHike]="fav_item"></app-user-hike>
+
+    </div>
+    <!-- <ion-col size="12" size-sm="12" size-md="6">Test</ion-col>
+        <ion-col size="12" size-sm="12" size-md="6">Test</ion-col> -->
+
+
+
+
+
     <ion-card class="trail-card">
-      <!-- <img src="{{hike.image}}"> -->
-
       <ion-card-header>
-
-        <ion-card-title>Placeholder</ion-card-title>
-        <ion-card-subtitle>placeholder</ion-card-subtitle>
+        <h2>{{currentUser.userName}},</h2>
+        <h3>help your fellow hykers!</h3>
+        <ion-img class="nohykes-img" src="../../assets/images/talking.png"></ion-img>
 
       </ion-card-header>
 
-
       <ion-card-content>
 
+
+
         <ion-accordion-group>
-          <ion-accordion class="accord" value="first">
+          <ion-accordion value="first">
             <ion-item class="accord" slot="header">
-              <ion-label class="accord">Reviews</ion-label>
-            </ion-item>
-
-
-          </ion-accordion>
-          <ion-accordion value="second">
-            <ion-item class="accord" slot="header">
-              <ion-label>Write a Review</ion-label>
+              <ion-label>Write a review!</ion-label>
             </ion-item>
             <div class="ion-padding review-height" slot="content">
               <app-review-form></app-review-form>

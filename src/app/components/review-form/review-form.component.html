@@ -3,15 +3,15 @@
         <form [formGroup]="reviewForm">
 
           <ion-item>
-            <ion-label position="stacked">User:</ion-label>
-            <ion-input formControlName="user_id" value="{{currentUser.id}}">{{currentUser.userName}}</ion-input>
+            <ion-label class="username-form" position="stacked">{{currentUser.userName}}</ion-label>
+            <ion-input formControlName="user_id" class="id-empty" type="checkbox" [(ngModel)]="currentUser.id"></ion-input>
           </ion-item>
 
           <!-- <ion-item color="danger" *ngIf="User_idFormControl.touched && User_idFormControl.errors?.['required']">Title Field is required</ion-item> -->
 
 
           <ion-item>
-            <ion-label position="stacked">Rating:</ion-label>
+            <ion-label position="stacked">rating:</ion-label>
             <div class="flex-rating">
             <ul class="list-inline rating-list"  *ngFor="let star of stars; let i= index">
               <li  (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}" (mouseover)="addClass(star)"
@@ -24,21 +24,23 @@
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Message</ion-label>
+            <ion-label position="stacked">message:</ion-label>
             <ion-textarea formControlName="message"></ion-textarea>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Trail Name</ion-label>
+            <ion-label position="stacked">trail name:</ion-label>
             <ion-select formControlName="trail_id">
-              <ion-select-option value="1">1</ion-select-option>
-              <ion-select-option value="2">2</ion-select-option>
-              <ion-select-option value="3">3</ion-select-option>
-              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="1">Johnson Lake</ion-select-option>
+              <ion-select-option value="2">Lake Louise</ion-select-option>
+              <ion-select-option value="3">Moraine Lake</ion-select-option>
+              <ion-select-option value="4">Jonston Canyon</ion-select-option>
+              <ion-select-option value="5">Larch Valley</ion-select-option>
+              <ion-select-option value="6">Bow Summit Lookout</ion-select-option>
             </ion-select>
           </ion-item>
 
-          <ion-button variant="primary" (click)="onSubmitReview()" [disabled]="reviewForm.invalid">Submit</ion-button>
+          <ion-button variant="primary" (click)="onSubmitReview()"  [disabled]="reviewForm.invalid">Submit</ion-button>
 
         </form>
      

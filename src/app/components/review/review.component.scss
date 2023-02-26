@@ -1,9 +1,9 @@
-.review-div {
+.review-text {
     font-family: "sniglet";
     color: #2C3333;
-    background-color: #EFEDE7;
-    border-radius: 4px;
-    padding: 4px;
+    width: 170px;
+    margin-left:6px;
+    
 }
 
 .flex-rating {
@@ -40,3 +40,31 @@ h5 {
     margin-top: 5px;
     margin-right: 2px;
 }
+
+.review-layout {
+    display: flex;
+}
+
+.review-img {
+border-radius: 50px;
+width: 40px;
+height: 40px;
+border: 4px solid #0e91A1;
+}
+
+.reviewbox {
+    display: flex;
+    background-color: #EFEDE7;
+    border-radius: 4px;
+    padding: 6px;
+    margin: 4px;
+}
+
+img {
+    object-fit: cover;
+    aspect-ratio: 1; 
+    width: 100%;
+    height: 100%;   
+    border-radius: 50px; 
+}
+

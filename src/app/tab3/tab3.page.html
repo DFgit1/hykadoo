@@ -6,45 +6,61 @@
     Info
     </ion-title>
     <div class="user-icon">
-      <ion-button id="open-modal3" expand="block" class="user-button"><img class="user-img" src="../../assets/images/traveler.png"></ion-button>
+      <ion-button id="open-modal3" expand="block" class="user-button">
+        <img class="user-img" src="http://localhost:3000/{{currentUser.image}}">
+      </ion-button>
     
     </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="bg-info" [fullscreen]="true" color="secondary">
-
+<div class="header">
+ <div class="cloud-group">
 <img class="cloud" src="../../../assets/images/cloud.png" alt="cloud">
 <img class="cloud2" src="../../../assets/images/cloud.png" alt="cloud">
+</div> 
 
-<h2>For Your Hike</h2>
+<h2>for your hyke!</h2>
 <ion-img class="idea" src="../../assets/images/idea.png" ></ion-img>
-
+</div>
 <div class="trav-div">
-<ion-img class="tips boot" src="../../assets/images/boot.png"></ion-img>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-sm="12" size-md="6">
+<ion-img class="tips" src="../../assets/images/boot.png"></ion-img>
 <p>Wear proper hiking shoes for support and stability. Hiking poles can also be used if extra support is needed.</p>
-
+</ion-col>
+<ion-col size="12" size-sm="12" size-md="6">
 <ion-img class="tips" src="../../assets/images/cloudy.png"></ion-img>
 <p>Check weather conditions before starting a hike and dress appropriately.  Layers are often required.</p>
-
+</ion-col>
+<ion-col size="12" size-sm="12" size-md="6">
 <ion-img class="tips" src="../../assets/images/food.png"></ion-img>
 <p>Bring enough water and snacks for the hike you 
   will be doing.</p>
-
+</ion-col>
+<ion-col size="12" size-sm="12" size-md="6">
 <ion-img class="tips" src="../../assets/images/sun-protection.png"></ion-img>
 <p>Apply sunscreen before and during the hike to protect
   yourself from the sun.</p>
-
-<ion-img class="tips bell" src="../../assets/images/bell.png"></ion-img>
+</ion-col>
+<ion-col size="12" size-sm="12" size-md="6">
+<ion-img class="tips" src="../../assets/images/bell.png"></ion-img>
 <p>Bringing a bear bell or a music device will alert wildlife that you are approaching and will not surprise them.</p>
-
+</ion-col>
+<ion-col size="12" size-sm="12" size-md="6">
 <ion-img class="tips paint" src="../../assets/images/paint.png"></ion-img>
 <p>Bears may be common in the area. Be sure to pack bear spray, but it should only be used
   as a last resort.</p>
+</ion-col>
+    </ion-row>
+  </ion-grid>
 
 <div class="infolinks">
   <h4>helpful links</h4>
- <ion-button class="infostyle" expand="block" (click)="openExternalPage()">Banff National Park</ion-button> 
+ <ion-button class="infobut" expand="block" (click)="openExternalPage()">Banff National Park</ion-button>
+ <ion-button class="infobut" expand="block" (click)="openExternalPage2()">Banff Park Pass</ion-button> 
 </div>
 </div>
 

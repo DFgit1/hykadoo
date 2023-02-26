@@ -2,14 +2,119 @@
     padding-bottom: 110px;
 }
 
-h1{
+h1 {
     font-family: "sniglet";
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     color: #EFEDE7;
-    width: 50%;
+    width: 70%;
     margin: 20px auto;
+    // text-shadow: 1px 1.5px rgba(0, 0, 0, 0.5);
 }
-.review-height{
-    height:420px;
+
+
+.review-height {
+    height: 420px;
 }
+
+.trail-card {
+    font-family: "sniglet";
+    color: black;
+    background-color: #efede7dd;
+    width: 300px;
+    margin: 40px auto;
+}
+
+ion-card-content {
+    font-family: "sniglet";
+    color: #EFEDE7;
+    // text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
+
+}
+
+h3 {
+    font-family: "sniglet";
+    color: #0E91A1;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: "sniglet";
+    color: #0E91A1;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+// ion-card-subtitle {
+//     font-family: "sniglet";
+//     color: #3C4048;
+//     margin-bottom: 0;
+//     padding-bottom: 0;
+// }
+
+ion-label {
+    font-family: "sniglet";
+    color: #2C3333;
+}
+
+
+.nohykes-img {
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+}
+
+
+
+.hyk-org {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.item.sc-ion-label-ios-h,
+.item .sc-ion-label-ios-h {
+    font-family: "sniglet";
+}
+
+
+.item-inner,
+.ion-padding {
+    background-color: #EFEDE7;
+    opacity: 80%;
+    padding: 6px;
+}
+
+.no-hykes {
+    background-color: #EFEDE7;
+    padding: 10px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 6px;
+    opacity: 80%;
+}
+
+h4 {
+    font-family: "sniglet";
+    color: #0E91A1;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
+}
+
+
+
+ 

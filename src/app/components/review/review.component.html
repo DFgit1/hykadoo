@@ -1,12 +1,27 @@
+<div class="reviewbox" *ngIf="reviews">
 
-<h3>Trail: {{reviews.trail_id}}</h3> 
-<h4>User: {{reviews.user_id}}</h4>
-<div class="flex-rating">
-    <h5>Rating: </h5>
-    <ul class="list-inline rating-list"  *ngFor="let star of stars; let i= index">
-      <li  [ngClass]="{'selected': ( star <= reviews.rating )}"> <span class="material-icons"> <ion-icon name="star"></ion-icon> </span>
-      </li>
-  </ul>
+  <div class="review-img">
+    <img class="rev-img" src="http://localhost:3000/{{reviews.User.image}}">
+    <!-- <ion-img class="rev-img" src="../../../assets/images/route.png"></ion-img> -->
   </div>
- 
-<p>Comment: {{reviews.message}}</p>
+
+
+
+
+
+  <div class="review-text">
+
+    
+    <h4>User: {{reviews.User.userName}}</h4>
+    <div class="flex-rating">
+      <ul class="list-inline rating-list" *ngFor="let star of stars; let i= index">
+        <li [ngClass]="{'selected': ( star <= reviews.rating )}"> <span class="material-icons"> <ion-icon
+              name="star"></ion-icon> </span>
+        </li>
+      </ul>
+    </div>
+
+    <p>"{{reviews.message}}"</p>
+
+  
+</div>

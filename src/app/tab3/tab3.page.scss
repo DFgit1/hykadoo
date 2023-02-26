@@ -80,9 +80,40 @@ h4 {
     background-color: #7DCE94;
     display: flex;
     margin: 60px auto;
-    width: 80%;
+    width: 300px;
     margin-bottom: 40px;
     flex-direction: column;
     border: 4px solid #EFEDE7;
     border-radius: 10px;
+}
+
+.cloud-group {
+width:400px;
+margin: 0 auto;  
+position: relative;
+}
+
+.infobut{
+    font-family: "sniglet";
+color: #EFEDE7;
+font-weight: 700;
+width: 250px;
+height: 50px;
+--background: #146C78;
+--background-activated: #146c78b7;
+border: 4px solid #EFEDE7;
+border-radius: 10px;
+font-size: 20px;
+margin: 0 auto 20px;
+display: block;
+--border-radius: 6px;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
 }
