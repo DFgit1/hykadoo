@@ -40,9 +40,11 @@ ngb-rating {
     font-size: 80px;
 }
 
-ion-label, ion-input, ion-select, ion-select-option ion-textarea, ion-item {
+ion-label, ion-input, ion-select, ion-select-option ion-textarea, ion-item, textarea {
     font-family: "sniglet";
 }
+
+
 
 ion-button {
     font-family: "sniglet";
@@ -57,6 +59,10 @@ ion-button {
 }
 
 .label-stacked.sc-ion-label-ios-h, .label-floating.sc-ion-label-ios-h {
+    font-family: "sniglet";
+}
+
+body > app-root > ion-app > ion-router-outlet > app-tabs > ion-tabs > div > ion-router-outlet > app-tab2 > ion-content > div > ion-card > ion-card-content > ion-accordion-group > ion-accordion > div > app-review-form > ion-content > form > ion-item.item.ios.item-lines-default.item-fill-none.hydrated.item-label.item-label-stacked.item-interactive.item-textarea.item-input.item-has-value.ion-dirty.ion-valid.ion-touched > ion-textarea > div > textarea {
     font-family: "sniglet";
 }
 

@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   selectedImage:any;
   uploadImage = 'no image selected...';
 
-  constructor(private service:UserService, private formbuilder: FormBuilder, private router:Router) { }
+  constructor(private service:UserService, private formbuilder: FormBuilder, public router:Router) { }
   show() {
     this.showModal = true;// Show-Hide Modal Check
     this.showBg = true;
@@ -83,7 +83,10 @@ export class LoginComponent implements OnInit {
       }
   
       this.service.register(fd).subscribe((result) => {
-        this.router.navigateByUrl('/tabs/tab1');
+        alert('Register successful!');
+        this.showModal2 =false;
+        this.showBg=false
+        // this.router.navigate(['../tabs/tab1']);
       }, (err) => {
         alert('Sign up failed!');
         console.log(err);

@@ -117,3 +117,41 @@ display: block;
     flex-direction: column;
     justify-content: center;
 }
+
+//account css
+.account-img {
+    width: 100px;
+    object-fit: cover;
+    border: 4px #EFEDE7 solid;
+    border-radius: 100px;
+    aspect-ratio: 1;
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 4px #7DCE94;
+    border-radius: 20px;
+    padding: 10px;
+    width: 96%;
+    margin: 20px auto;
+}
+
+
+.account-data {
+    font-family: "sniglet";
+    margin-left: 20px;
+}
+
+h5{
+    margin:0;
+}
+
+.account-h5 {
+    margin: 0;
+}
+
+span {
+    font-weight: 700;
+}

@@ -12,7 +12,7 @@
   <div class="review-text">
 
     
-    <h4>User: {{reviews.User.userName}}</h4>
+    <h4>User: <span>{{reviews.User.userName}}</span></h4>
     <div class="flex-rating">
       <ul class="list-inline rating-list" *ngFor="let star of stars; let i= index">
         <li [ngClass]="{'selected': ( star <= reviews.rating )}"> <span class="material-icons"> <ion-icon

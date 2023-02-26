@@ -59,7 +59,7 @@
         <ion-accordion-group>
           <ion-accordion value="first">
             <ion-item class="accord" slot="header">
-              <ion-label>Write a review!</ion-label>
+              <ion-label>write a review!</ion-label>
             </ion-item>
             <div class="ion-padding review-height" slot="content">
               <app-review-form></app-review-form>
@@ -78,11 +78,19 @@
   <ion-img class="tree2" src="../../assets/images/tree1.png"></ion-img>
   <ion-img class="tree3" src="../../assets/images/tree1.png"></ion-img>
 
-  <ion-modal trigger="open-modal2" initialBreakpoint="0.16" [breakpoints]="[0, 0.16]" handleBehavior="cycle">
+  <ion-modal trigger="open-modal2" initialBreakpoint="0.30" [breakpoints]="[0, 0.30]" handleBehavior="cycle">
 
     <ng-template>
       <ion-content color="secondary" class="ion-padding">
         <div class="ion-margin-top">
+          <div class="account-info">
+            <img class="account-img" src="http://localhost:3000/{{currentUser.image}}">
+            <div class="account-data">
+              <h5 class="accout-h4">user: <span>{{currentUser.userName}}</span></h5>
+              <h5 class="accout-h4">email: <span>{{currentUser.email}}</span></h5>
+              <h5 class="accout-h4">member since: <span>{{currentUser.dt}}</span></h5>
+            </div>
+          </div>
           <ion-button class="logstyle" expand="block" (click)="logout(); modal.dismiss()">Log Out</ion-button>
         </div>
       </ion-content>
